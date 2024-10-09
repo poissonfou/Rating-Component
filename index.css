@@ -1,0 +1,148 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+  --ff-overpass: "Overpass", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-overpass);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--very-dark-blue);
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  width: fit-content;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  margin-top: 50%;
+}
+
+.card__content__form--submitted {
+  display: none;
+}
+
+.card__content__submitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__content__submitted--unsubmitted {
+  display: none;
+}
+
+.card__icon {
+  background-color: hsl(212, 14%, 22%);
+  width: fit-content;
+  aspect-ratio: 1;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-weight: 500;
+  color: var(--white);
+  margin: 1rem 0rem;
+}
+
+.card__title--submitted {
+  text-align: center;
+  margin-top: 0;
+}
+
+.card__desc {
+  font-size: 15px;
+  color: var(--light-grey);
+  line-height: 1.5rem;
+}
+
+.card__desc--submitted {
+  text-align: center;
+}
+
+.rating__submitted {
+  background-color: hsl(212, 14%, 22%);
+  color: var(--orange);
+  font-size: 15px;
+  width: fit-content;
+  padding: 0.5rem 0.7rem;
+  border-radius: 20px;
+  margin: 2rem 0rem;
+}
+
+.card__ratings {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  margin: 1.5rem 0rem;
+}
+
+.card__rating {
+  color: var(--light-grey);
+  background-color: hsl(212, 14%, 22%);
+  border-radius: 50%;
+  line-height: 50px;
+  width: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card__rating--selected {
+  color: var(--dark-blue) !important;
+  background-color: var(--white) !important;
+}
+
+.card__rating:hover,
+.card__rating:focus {
+  color: var(--dark-blue);
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+.card__submit {
+  background-color: var(--orange);
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 0rem;
+}
+
+.card__submit:hover,
+.card__submit:focus {
+  color: var(--dark-blue);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+@media (min-width: 35rem) {
+  .card {
+    position: absolute;
+    margin-top: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  .card__desc {
+    width: 20rem;
+  }
+}

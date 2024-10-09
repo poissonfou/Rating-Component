@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Rating</title>
+</head>
+
+<body>
+    <main class="card">
+        <div class="card__content__form" id="content-submittion">
+            <div class="card__icon">
+                <img src="images/icon-star.svg" alt="A star icon">
+            </div>
+            <h1 class="card__title">How did we do?</h1>
+            <p class="card__desc">Please let us know how we did with your support request. All feedback is appreciated
+                to help us improve our offering!
+            </p>
+            <form action="POST" id="card-form">
+                <ul class="card__ratings" id="checkbox-container">
+                    <li role="checkbox" aria-checked="false" tabindex="0" class="card__rating">
+                        1
+                    </li>
+                    <li role="checkbox" aria-checked="false" tabindex="-1" class="card__rating">
+                        2
+                    </li>
+                    <li role="checkbox" aria-checked="false" tabindex="-1" class="card__rating">
+                        3
+                    </li>
+                    <li role="checkbox" aria-checked="false" tabindex="-1" class="card__rating">
+                        4
+                    </li>
+                    <li role="checkbox" aria-checked="false" tabindex="-1" class="card__rating">
+                        5
+                    </li>
+                </ul>
+                <button class="card__submit">Submit</button>
+            </form>
+        </div>
+        <div class="card__content__submitted card__content__submitted--unsubmitted" id="content-submitted">
+            <img src="images/illustration-thank-you.svg" alt="An illustration of a cellphone">
+            <p class="rating__submitted" id="rating-selected">You selected 4 out of 5</p>
+            <h1 class="card__title card__title--submitted">Thank you!</h1>
+            <p class="card__desc card__desc--submitted">We appreciate you taking the time to give a rating. If you ever
+                need more support,
+                don't hesitate to get in touch!</p>
+        </div>
+    </main>
+</body>
+
+</html>
