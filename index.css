@@ -56,7 +56,9 @@ body {
 .card__title {
   font-weight: 500;
   color: var(--white);
-  margin: 1rem 0rem;
+  margin-bottom: 0.7rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .card__title--submitted {
@@ -102,7 +104,7 @@ body {
   text-align: center;
 }
 
-.card__rating--selected {
+[aria-checked="true"] {
   color: var(--dark-blue) !important;
   background-color: var(--white) !important;
 }
@@ -144,5 +146,9 @@ body {
 
   .card__desc {
     width: 20rem;
+  }
+
+  .card__submit {
+    padding: 0.5rem;
   }
 }

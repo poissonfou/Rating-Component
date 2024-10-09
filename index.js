@@ -23,14 +23,11 @@ function selectedCheckbox(checkbox) {
 
     if (previousRating) {
       previousRating.setAttribute("aria-checked", false);
-      previousRating.classList.remove("card__rating--selected");
     }
 
     checkbox.setAttribute("aria-checked", true);
-    checkbox.classList.add("card__rating--selected");
   } else {
     checkbox.setAttribute("aria-checked", false);
-    checkbox.classList.remove("card__rating--selected");
   }
 }
 
