@@ -24,7 +24,7 @@
                 to help us improve our offering!
             </p>
             <form action="POST" id="card-form">
-                <ul class="card__ratings" id="checkbox-container">
+                <ul class="card__ratings" aria-describedby="input-desc" id="checkbox-container">
                     <li role="checkbox" aria-checked="false" tabindex="0" class="card__rating">
                         1
                     </li>
@@ -41,6 +41,7 @@
                         5
                     </li>
                 </ul>
+                <p class="sr-only" id="input-desc">Please select a rating between 1 and 5</p>
                 <button class="card__submit">Submit</button>
             </form>
         </div>
